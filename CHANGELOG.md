@@ -1,36 +1,43 @@
-# 1.0.4
-* Upgrade Settings are back: Upgrade Chance, Break Chance, Consume Idols Only On
-  Failure, Material Return On Break, idol refunds on break, idol cost scaling and
-  crafting time.
-* New defaults: 50% Upgrade Chance, and a failed upgrade only uses up the idols and
-  materials; the item itself is left untouched (same level, durability and crafter)
-  and never breaks. Turn off Consume Idols Only
-  On Failure for the game's behaviour (Break Chance 1 = the item breaks).
-* Forge rolls are seeded from the character's random ID instead of its name, so a
-  name can no longer be picked to win an upgrade. Name Seeded Rolls restores the
-  game's behaviour.
+# Changelog
 
-# 1.0.3
-* New Blocked Items setting: items that cannot be refined at the Forge of Potential.
-  Blocks the cosmetic hats, dresses, tunics and Harvester outfits by default and
-  accepts prefab names or in-game names, so newly added cosmetics can be listed too.
+## 1.0.5
 
-# 1.0.2
-* Fix: the Forge line (next idol, limit and progress) was erased by the game every
-  frame and never shown; it now stays under the item description.
-* Fix: idols could still drop from chests and traders placed by locations and dungeons.
-  Idols are now removed wherever loot is rolled (chests, pickables, creature drops,
-  trader stock). Chests generated before installing keep their contents.
+Documentation update. Gameplay behavior is unchanged. Install the same mod version on the server and every client.
 
-# 1.0.1
-* New package icon taken from the game.
+* Expanded the player guide with installation, configuration, multiplayer, backup, update, compatibility and troubleshooting help.
+* Added a 17-question FAQ covering refinement limits, boss progress, idols, failed upgrades, server settings and existing saves. The FAQ is included on the public player page and in the Hexium package.
+* Download and support links now point to Den's Reforged Potential's public GitHub page.
 
-# 1.0.0
-* Biome progression for the Forge of Potential with the vanilla Forge unchanged.
-* Refinement levels in biome bands following vanilla's per-level steps, unlocked by
-  world (or character) boss progress.
-* Each refinement costs the idol of its band's biome; no biome is skipped.
-* Class cap keeps light, heavy and mage armor and each shield type in their lines.
-* Item biome from crafting materials and station.
-* Idols are craftable from biome materials and removed from all loot.
-* `drp_catalog` and `drp_explain` console commands.
+## 1.0.4
+
+Upgrade settings return, with safer defaults for failed attempts. Check the server's settings before refining valuable equipment.
+
+* New default: upgrades have a 50% success chance. A failed attempt consumes the required idols and materials but preserves the item's quality, durability and crafter.
+* Added settings for success chance, item break chance, material returns, idol refunds, increasing idol costs and crafting time.
+* **Consume Idols Only On Failure** is enabled by default. If disabled, failures can destroy the item or reduce its quality according to **Break Chance**. A Break Chance of 1 makes every failed attempt destroy the item.
+* Choosing a character name no longer lets players select favorable upgrade results. Outcomes remain fixed for each character, item and level, so reloading does not change a result. **Name Seeded Rolls** restores the game's name-based behavior when enabled.
+
+## 1.0.3
+
+* Added **Blocked Items** so server owners can prevent selected equipment from being refined at the Forge of Potential.
+* Cosmetic hats, dresses, tunics and Harvester outfits are blocked by default. Additional items can be listed by prefab name or in-game name.
+
+## 1.0.2
+
+* Fixed the Forge's next-idol, refinement-limit and progress information disappearing from the item description. It now remains visible while viewing the item.
+* Fixed idols still appearing in some location and dungeon chests and trader inventories. Idol removal now covers newly generated loot and trader stock. Chests filled before installing retain their existing contents.
+
+## 1.0.1
+
+* Updated the mod's package icon using artwork from Valheim.
+
+## 1.0.0
+
+Initial release. Required on the server and every client.
+
+* Added biome-based refinement progression at the existing Forge of Potential. Additional levels unlock as bosses are defeated, using shared world progress by default or each character's progress when configured.
+* Refinements advance through biome bands and use that band's idol, keeping idol costs in biome order.
+* Added armor and shield limits that keep equipment within its class: light, heavy and mage armor remain distinct, as do the different shield types.
+* Equipment is assigned to a biome using its crafting materials and station, with configurable overrides for items that need a different classification.
+* Added craftable idols made from biome materials and removed idols from newly generated loot.
+* Added **drp_explain** to explain the selected Forge item's requirements and **drp_catalog** to list equipment and its refinement limits.
