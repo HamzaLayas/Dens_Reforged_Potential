@@ -24,6 +24,10 @@ The mod uses the game's Forge of Potential in the Mountains. It does not add a r
 
 The next band may require more boss progress, the item may have reached its class cap, or it may be blocked. Gear from a biome you have not unlocked and Deep North gear stay at their vanilla maximum. The Forge shows the next idol and current limit; use drp_explain at the Forge for details.
 
+## Why is an item greyed out at the Forge?
+
+The item has reached its current limit, is blocked, or you lack the required idols. The Forge only charges idols; ordinary crafting materials are not needed. Select the item to see the next idol and limit, or use drp_explain for details.
+
 ## Which boss unlocks the next band?
 
 By default, defeating the previous biome's boss unlocks the next biome's band: Eikthyr for Black Forest, the Elder for Swamp, Bonemass for Mountain, Moder for Plains, Yagluth for Mistlands, the Queen for Ashlands, and Fader for Deep North. World progress is shared by default; the server can select character progress instead.

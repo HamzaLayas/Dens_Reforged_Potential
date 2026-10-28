@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.6
+
+Display fix, verified on Valheim 1.0.21. Install the same mod version on the server and every client.
+
+* Fixed equipment in the Forge of Potential's list appearing greyed out when it could still be refined. The list required the item's ordinary crafting materials, but the Forge only charges idols. Items are now greyed out only when they have reached their limit, are blocked, or the required idols are missing.
+* Confirmed compatibility with Valheim 1.0.21. Servers and clients on 1.0.20 and 1.0.21 remain compatible with each other.
+
 ## 1.0.5
 
 Documentation update. Gameplay behavior is unchanged. Install the same mod version on the server and every client.
