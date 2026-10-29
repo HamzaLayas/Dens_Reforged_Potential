@@ -42,7 +42,11 @@ Get help and report problems at the [public player repository](https://github.co
   no longer appear in chests, creature drops or trader stock. Chests filled before
   installing keep their contents.
 
-The Forge shows the next idol and the current limit. Use `drp_explain` at the Forge
+- The success chance falls gently as the item's level rises: 75% for the first
+  refinement, 1.5 points lower for each level after it, never below 40%. By default a
+  failed attempt only uses up the idols; the item keeps its level.
+
+The Forge shows the next idol, its success chance and the current limit. Use `drp_explain` at the Forge
 for details, or `drp_catalog` to list every item.
 
 ## Configuration
@@ -50,11 +54,12 @@ for details, or `drp_catalog` to list every item.
 `BepInEx/config/com.sterbenden.densreforgedpotential.cfg`, synced from the server
 when **Enable Server Sync** is on:
 
-- **Upgrade Settings**: Upgrade Chance (0.5), Consume Idols Only On Failure (on),
+- **Upgrade Settings**: Starting Upgrade Chance (0.75), Upgrade Chance Decrease Per
+  Level (0.015), Minimum Upgrade Chance (0.4), Consume Idols Only On Failure (on),
   Break Chance (1, used when the previous setting is off: the share of failures that
   break the item; the rest lose one level), Material Return On Break (0.35), idol
-  refunds on break (off), idol cost scaling (off: the game's amounts), crafting time
-  (8 s + 1 s per level) and Name Seeded Rolls (off).
+  refunds on break (off), crafting time (8 s + 1 s per level) and Name Seeded Rolls
+  (off). Idol amounts are always the game's own.
 - Progression and idols: progress source, boss per biome, class cap, biome
 idols, overrides and exclusions, idol loot removal, idol recipes and stations, and
 **Blocked Items**: items that cannot be refined at the Forge (cosmetic clothing by
@@ -89,7 +94,7 @@ After a Valheim, BepInEx, or Jötunn update, check the release notes and try a c
 
 * **The mod does not load:** verify BepInEx starts, Jötunn is installed, and there is exactly one mod DLL. Read `BepInEx/LogOutput.log` for the first load error.
 * **An upgrade is blocked:** check boss progress, the selected progress source, the item class cap, and Blocked Items. At the Forge, use `drp_explain`; use `drp_catalog` to inspect the catalog.
-* **The wrong idol or cost appears:** check Biome Idols, tier overrides, and cost scaling. Remove other Forge-changing mods in a separate test profile.
+* **The wrong idol or cost appears:** check Biome Idols and tier overrides. Remove other Forge-changing mods in a separate test profile.
 * **Settings differ between players:** check the server configuration, Enable Server Sync, matching mod versions, and reconnect after restarting.
 * **Idols remain in a chest:** contents generated before installation are not removed. Newly generated loot follows the loot-removal setting.
 

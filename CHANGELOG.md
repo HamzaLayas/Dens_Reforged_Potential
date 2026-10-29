@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.1.0
+
+The upgrade chance now falls gently with level, and idol cost scaling is removed. Install the same mod version on the server and every client; older versions cannot join.
+
+* The success chance now depends on the level being refined to. It starts at 75% for the first refinement and drops by 1.5 points per level, never below 40%: about 68% at level 7, 58% at level 13, 50% at level 19 and 41% at level 25. Early refinements are easier than before and the last few are harder.
+* The Forge's next-refinement line and **drp_explain** now show the success chance for the selected item. The FAQ explains the new chances.
+* New settings: **Starting Upgrade Chance**, **Upgrade Chance Decrease Per Level** and **Minimum Upgrade Chance**. Set the decrease to 0 for the same chance at every level. They replace **Upgrade Chance**, so servers start on the new defaults.
+* Removed idol cost scaling. The falling chance already makes later levels cost more idols on average, and idol amounts are always the game's own. **Enable Cost Scaling**, **Cost Start**, **Cost Increase Per Interval**, **Cost Increase Interval**, **Cost Scaling Level Start**, **Cost Level Basis** and the old **Upgrade Chance** are deleted from the config file automatically. Other settings keep their values.
+* Failed attempts still keep the item by default. Break Chance and the other failure settings work as before.
+
 ## 1.0.6
 
 Display fix, verified on Valheim 1.0.21. Install the same mod version on the server and every client.

@@ -42,7 +42,11 @@ Class caps keep armor and shields within the best vanilla item of the same class
 
 ## Can a failed attempt destroy my item?
 
-With the default Consume Idols Only On Failure enabled, a failed attempt charges the required consumables but leaves the item, quality, durability and crafter intact. Upgrade Chance defaults to 50 percent. If the server disables that option, Break Chance controls the share of failures that destroy the item; other failures lose a level. Read the server settings before attempting valuable upgrades.
+With the default Consume Idols Only On Failure enabled, a failed attempt charges the required consumables but leaves the item, quality, durability and crafter intact. The success chance starts at 75 percent for the first refinement and falls by 1.5 points per level, never below 40 percent; the Forge shows the chance for the selected item. If the server disables that option, Break Chance controls the share of failures that destroy the item; other failures lose a level. Read the server settings before attempting valuable upgrades.
+
+## Why does the success chance get lower at higher levels?
+
+Each level is a little harder than the last: the first refinement succeeds 75 percent of the time, and every level after it is 1.5 points lower, down to a minimum of 40 percent. The Forge shows the chance for the selected item. Server owners can change the starting chance, the decrease per level and the minimum; a decrease of 0 gives the same chance at every level. Idol amounts stay the game's own.
 
 ## Why does reloading not change an upgrade result?
 
